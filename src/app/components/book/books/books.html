@@ -1,0 +1,40 @@
+
+<div class="books">
+
+  <ul class="books-list">
+    <li>
+      <div class="book-card">
+        <a
+           class="book-card__link button--clean"
+          >
+
+          <div class="book-card__column book-card__column--name">
+            TITLE
+          </div>
+          <div class="book-card__column book-card__column--name">
+           AUTHOR
+          </div>
+          <div class="book-card__column book-card__column--email">
+            LOCATION
+          </div>
+
+        </a>
+      </div>
+
+    </li>
+
+
+    <li ng-repeat="book in $ctrl.filteredBooks">
+      <book
+        book="book"
+        on-select="$ctrl.goToBook($event);">
+      </book>
+    </li>
+  </ul>
+  <div
+    class="books__empty"
+    ng-if="!$ctrl.filteredBooks.length">
+    <i class="material-icons">face</i>
+    There's no one here...
+  </div>
+</div>

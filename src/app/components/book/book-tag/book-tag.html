@@ -1,0 +1,17 @@
+<div class="book__field book__field--long">
+  <label>
+    Tag
+  </label>
+  <ul>
+    <li
+      class="book-card__pill book-card__pill--{{ tag }}"
+      ng-repeat="tag in ::$ctrl.tags"
+      ng-class="{
+        'book__pill--active': $ctrl.tag == tag
+      }">
+
+      <a href="" ng-click="$ctrl.updateTag(tag);" class="ng-binding"> {{ ::tag }}</a>
+
+    </li>
+  </ul>
+</div>

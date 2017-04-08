@@ -1,0 +1,187 @@
+<div class="book">
+  <form name="bookDetailForm" novalidate>
+    <div>
+      <span class="book__required">*</span> field is required
+    </div>
+    <div class="book__box">
+      <h3 class="book__sub-title">
+        Information
+      </h3>
+      <div class="book__field">
+        <label>
+          Title <span class="book__required">*</span>
+        </label>
+        <input
+          type="text"
+          name="name"
+          length-check
+          required="required"
+          ng-change="$ctrl.updateBook();"
+          ng-model-options="{
+            'updateOn': 'default blur',
+            'debounce': {
+              'default': 250,
+              'blur': 0
+            }
+          }"
+
+          ng-model="$ctrl.book.name">
+      </div>
+      <div class="book__field">
+        <label>
+          Call Number
+          <span class="book__error" ng-if="bookDetailForm.email.$error.email">
+            Must be a valid email
+          </span>
+        </label>
+        <input
+          type="email"
+          name="email"
+          length-check
+          ng-change="$ctrl.updateBook();"
+          ng-model-options="{
+            'updateOn': 'default blur',
+            'debounce': {
+              'default': 250,
+              'blur': 0
+            }
+          }"
+          ng-model="$ctrl.book.email">
+      </div>
+      <div class="book__field">
+        <label>
+          Publisher
+        </label>
+        <input
+          type="text"
+          name="jobTitle"
+          length-check
+          ng-change="$ctrl.updateBook();"
+          ng-model-options="{
+            'updateOn': 'default blur',
+            'debounce': {
+              'default': 250,
+              'blur': 0
+            }
+          }"
+          ng-model="$ctrl.book.job">
+      </div>
+      <div class="book__field">
+        <label>
+          Author
+        </label>
+        <input
+          type="text"
+          name="location"
+          length-check
+          ng-change="$ctrl.updateBook();"
+          ng-model-options="{
+            'updateOn': 'default blur',
+            'debounce': {
+              'default': 250,
+              'blur': 0
+            }
+          }"
+          ng-model="$ctrl.book.location">
+      </div>
+    </div>
+    <div class="book__box book__box--no-margin">
+      <h3 class="book__sub-title">
+        Details
+      </h3>
+      <div class="book__field">
+        <label>
+          ISBN/ISSN
+        </label>
+        <input
+          type="text"
+          name="facebook"
+          length-check
+          ng-change="$ctrl.updateBook();"
+          ng-model-options="{
+            'updateOn': 'default blur',
+            'debounce': {
+              'default': 250,
+              'blur': 0
+            }
+          }"
+          ng-model="$ctrl.book.social.facebook">
+      </div>
+      <div class="book__field">
+        <label>
+          Table of content
+        </label>
+        <input
+          type="text"
+          name="github"
+          length-check
+          ng-change="$ctrl.updateBook();"
+          ng-model-options="{
+            'updateOn': 'default blur',
+            'debounce': {
+              'default': 250,
+              'blur': 0
+            }
+          }"
+          ng-model="$ctrl.book.social.github">
+      </div>
+      <div class="book__field">
+        <label>
+          Twitter
+        </label>
+        <input
+          type="text"
+          name="twitter"
+          length-check
+          ng-change="$ctrl.updateBook();"
+          ng-model-options="{
+            'updateOn': 'default blur',
+            'debounce': {
+              'default': 250,
+              'blur': 0
+            }
+          }"
+          ng-model="$ctrl.book.social.twitter">
+      </div>
+      <div class="book__field">
+        <label>
+          LinkedIn
+        </label>
+        <input type="file" accept="image/*" custom-on-change="$ctrl.image" />
+      </div>
+      <div class="bookphoto">
+        <img ng-src="{{$ctrl.book.photo_data.url}}">
+      </div>
+    </div>
+    <book-tag
+      tag="$ctrl.book.tag"
+      on-change="$ctrl.tagChange($event);">
+    </book-tag>
+
+    <div ng-if="$ctrl.isNewBook">
+      <button
+        class="book__action button"
+        ng-disabled="bookDetailForm.$invalid"
+        ng-click="$ctrl.saveBook();">
+        Create book
+      </button>
+    </div>
+    <div ng-if="!$ctrl.isNewBook">
+
+
+      <button
+        class="book__action button delete"
+        ng-click="$ctrl.deleteBook();">
+        Delete Book
+      </button>
+      &nbsp;
+      <button
+        class="book__action button "
+        ng-click="$ctrl.updateBook();">
+        Update Book
+      </button>
+
+    </div>
+
+  </form>
+</div>

@@ -1,6 +1,6 @@
 function AppSidebarController() {
   var ctrl = this;
-  ctrl.contactTags = [{
+  ctrl.bookTags = [{
     label: 'All Books',
     icon: 'star',
     state: 'none'

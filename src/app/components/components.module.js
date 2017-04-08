@@ -4,7 +4,7 @@
  * @ngdoc module
  * @name components
  *
- * @requires components.contact
+ * @requires components.book
  * @requires components.auth
  *
  * @description
@@ -15,7 +15,7 @@
 
 angular
   .module('components', [
-    'components.contact',
+    'components.book',
     'components.auth',
     'components.student'
   ]);
