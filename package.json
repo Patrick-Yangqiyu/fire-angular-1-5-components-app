@@ -1,15 +1,15 @@
 {
-  "name": "contacts",
+  "name": "MobileProject",
   "version": "1.0.0",
-  "author": "@toddmotto",
-  "description": "Contacts manager app for Ultimate AngularJS",
+  "author": "@YANG",
+  "description": "A project",
   "scripts": {
     "start": "gulp",
     "test": "karma start",
     "deploy": "gulp production --deploy"
   },
   "license": "MIT",
-  "repository": "https://github.com/toddmotto/angular-1-5-components-app",
+  "repository": "https://github.com/Patrick-Yangqiyu/fire-angular-1-5-components-app.git",
   "dependencies": {
     "angular": "^1.5.8",
     "angular-loading-bar": "^0.9.0",

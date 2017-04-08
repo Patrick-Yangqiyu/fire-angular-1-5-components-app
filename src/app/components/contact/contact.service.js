@@ -1,6 +1,7 @@
-function ContactService(AuthService, $firebaseRef, $firebaseArray, $firebaseObject) {
+function ContactService(AuthService, $firebaseRef, $firebaseArray, $firebaseObject ,$firebaseStorage) {
   var ref = $firebaseRef.books;
   var uid = AuthService.getUser().uid;
+  var storageRef = firebase.storage().ref('bookprofile');
   return {
     createNewContact: function (contact) {
       return $firebaseArray(ref).$add(contact);
@@ -16,6 +17,12 @@ function ContactService(AuthService, $firebaseRef, $firebaseArray, $firebaseObje
     },
     deleteContact: function (contact) {
       return contact.$remove();
+    },
+    uploadimage: function (id,file) {
+      storageRef = storageRef.child(id).child(file.name);
+      var storage = $firebaseStorage(storageRef);
+      var uploadTask = storage.$put(file);
+      return uploadTask;
     }
   };
 }

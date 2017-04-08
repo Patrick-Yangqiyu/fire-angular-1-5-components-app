@@ -12,6 +12,9 @@ function ContactNewController(ContactService, $state) {
         twitter: '',
         linkedin: ''
       },
+      photo_data:{
+          url:''
+      },
       tag: 'none'
     };
   };

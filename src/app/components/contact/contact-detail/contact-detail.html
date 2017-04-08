@@ -16,7 +16,7 @@
           name="name"
           length-check
           required="required"
-          ng-change=""
+          ng-change="$ctrl.updateContact();"
           ng-model-options="{
             'updateOn': 'default blur',
             'debounce': {
@@ -24,6 +24,7 @@
               'blur': 0
             }
           }"
+
           ng-model="$ctrl.contact.name">
       </div>
       <div class="contact__field">
@@ -37,7 +38,7 @@
           type="email"
           name="email"
           length-check
-          ng-change=""
+          ng-change="$ctrl.updateContact();"
           ng-model-options="{
             'updateOn': 'default blur',
             'debounce': {
@@ -55,7 +56,7 @@
           type="text"
           name="jobTitle"
           length-check
-          ng-change=""
+          ng-change="$ctrl.updateContact();"
           ng-model-options="{
             'updateOn': 'default blur',
             'debounce': {
@@ -73,7 +74,7 @@
           type="text"
           name="location"
           length-check
-          ng-change=""
+          ng-change="$ctrl.updateContact();"
           ng-model-options="{
             'updateOn': 'default blur',
             'debounce': {
@@ -96,7 +97,7 @@
           type="text"
           name="facebook"
           length-check
-          ng-change=""
+          ng-change="$ctrl.updateContact();"
           ng-model-options="{
             'updateOn': 'default blur',
             'debounce': {
@@ -114,7 +115,7 @@
           type="text"
           name="github"
           length-check
-          ng-change=""
+          ng-change="$ctrl.updateContact();"
           ng-model-options="{
             'updateOn': 'default blur',
             'debounce': {
@@ -132,7 +133,7 @@
           type="text"
           name="twitter"
           length-check
-          ng-change=""
+          ng-change="$ctrl.updateContact();"
           ng-model-options="{
             'updateOn': 'default blur',
             'debounce': {
@@ -146,22 +147,12 @@
         <label>
           LinkedIn
         </label>
-        <input
-          type="text"
-          name="linkedin"
-          length-check
-          ng-change=""
-          ng-model-options="{
-            'updateOn': 'default blur',
-            'debounce': {
-              'default': 250,
-              'blur': 0
-            }
-          }"
-          ng-model="$ctrl.contact.social.linkedin">
+        <input type="file" accept="image/*" custom-on-change="$ctrl.image" />
+      </div>
+      <div class="bookphoto">
+        <img ng-src="{{$ctrl.contact.photo_data.url}}">
       </div>
     </div>
-
     <contact-tag
       tag="$ctrl.contact.tag"
       on-change="$ctrl.tagChange($event);">
