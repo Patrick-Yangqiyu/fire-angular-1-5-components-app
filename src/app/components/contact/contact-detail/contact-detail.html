@@ -5,18 +5,18 @@
     </div>
     <div class="contact__box">
       <h3 class="contact__sub-title">
-        Personal
+        Information
       </h3>
       <div class="contact__field">
         <label>
-          Name <span class="contact__required">*</span>
+          Title <span class="contact__required">*</span>
         </label>
         <input
           type="text"
           name="name"
           length-check
           required="required"
-          ng-change="$ctrl.updateContact();"
+          ng-change=""
           ng-model-options="{
             'updateOn': 'default blur',
             'debounce': {
@@ -28,7 +28,7 @@
       </div>
       <div class="contact__field">
         <label>
-          Email
+          Call Number
           <span class="contact__error" ng-if="contactDetailForm.email.$error.email">
             Must be a valid email
           </span>
@@ -37,7 +37,7 @@
           type="email"
           name="email"
           length-check
-          ng-change="$ctrl.updateContact();"
+          ng-change=""
           ng-model-options="{
             'updateOn': 'default blur',
             'debounce': {
@@ -49,13 +49,13 @@
       </div>
       <div class="contact__field">
         <label>
-          Job title
+          Publisher
         </label>
         <input
           type="text"
           name="jobTitle"
           length-check
-          ng-change="$ctrl.updateContact();"
+          ng-change=""
           ng-model-options="{
             'updateOn': 'default blur',
             'debounce': {
@@ -67,13 +67,13 @@
       </div>
       <div class="contact__field">
         <label>
-          Location
+          Author
         </label>
         <input
           type="text"
           name="location"
           length-check
-          ng-change="$ctrl.updateContact();"
+          ng-change=""
           ng-model-options="{
             'updateOn': 'default blur',
             'debounce': {
@@ -86,17 +86,17 @@
     </div>
     <div class="contact__box contact__box--no-margin">
       <h3 class="contact__sub-title">
-        Social
+        Details
       </h3>
       <div class="contact__field">
         <label>
-          Facebook
+          ISBN/ISSN
         </label>
         <input
           type="text"
           name="facebook"
           length-check
-          ng-change="$ctrl.updateContact();"
+          ng-change=""
           ng-model-options="{
             'updateOn': 'default blur',
             'debounce': {
@@ -108,13 +108,13 @@
       </div>
       <div class="contact__field">
         <label>
-          GitHub
+          Table of content
         </label>
         <input
           type="text"
           name="github"
           length-check
-          ng-change="$ctrl.updateContact();"
+          ng-change=""
           ng-model-options="{
             'updateOn': 'default blur',
             'debounce': {
@@ -132,7 +132,7 @@
           type="text"
           name="twitter"
           length-check
-          ng-change="$ctrl.updateContact();"
+          ng-change=""
           ng-model-options="{
             'updateOn': 'default blur',
             'debounce': {
@@ -150,7 +150,7 @@
           type="text"
           name="linkedin"
           length-check
-          ng-change="$ctrl.updateContact();"
+          ng-change=""
           ng-model-options="{
             'updateOn': 'default blur',
             'debounce': {
@@ -176,11 +176,20 @@
       </button>
     </div>
     <div ng-if="!$ctrl.isNewContact">
+
+
       <button
         class="contact__action button delete"
         ng-click="$ctrl.deleteContact();">
-        Delete contact
+        Delete Book
       </button>
+      &nbsp;
+      <button
+        class="contact__action button "
+        ng-click="$ctrl.updateContact();">
+        Update Book
+      </button>
+
     </div>
 
   </form>

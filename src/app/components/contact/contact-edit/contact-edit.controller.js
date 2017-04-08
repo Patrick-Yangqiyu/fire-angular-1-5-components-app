@@ -24,7 +24,7 @@ function ContactEditController($state, ContactService, cfpLoadingBar, $window) {
    * @return {method} ContactService returns the deleteContact method and a promise
    */
   ctrl.deleteContact = function (event) {
-    var message = 'Delete ' + event.contact.name + ' from contacts?';
+    var message = 'Delete ' + event.contact.name + ' from Books?';
     if ($window.confirm(message)) {
       return ContactService
         .deleteContact(event.contact)
@@ -40,16 +40,7 @@ function ContactEditController($state, ContactService, cfpLoadingBar, $window) {
  * @module components.contact
  * @name ContactEditController
  *
- * @description
- *
- * ## Lorem Ipsum 1
- * Aenean ornare odio elit, eget facilisis ipsum molestie ac. Nam bibendum a nibh ut ullamcorper.
- * Donec non felis gravida, rutrum ante mattis, sagittis urna. Sed quam quam, facilisis vel cursus at.
- *
- * ## Lorem Ipsum 2
- * Aenean ornare odio elit, eget facilisis ipsum molestie ac. Nam bibendum a nibh ut ullamcorper.
- * Donec non felis gravida, rutrum ante mattis, sagittis urna. Sed quam quam, facilisis vel cursus at.
- */
+*/
 angular
   .module('components.contact')
   .controller('ContactEditController', ContactEditController);

@@ -1,25 +1,25 @@
 function AppSidebarController() {
   var ctrl = this;
   ctrl.contactTags = [{
-    label: 'All contacts',
+    label: 'All Books',
     icon: 'star',
     state: 'none'
   }, {
-    label: 'Friends',
+    label: 'History',
+    icon: 'account_balance',
+    state: 'history'
+  }, {
+    label: 'Science&Physics',
+    icon: 'school',
+    state: 'science-physics'
+  }, {
+    label: 'Business&Economics',
+    icon: 'business_center',
+    state: 'business-economics'
+  }, {
+    label: 'Sociology&Psychology',
     icon: 'people',
-    state: 'friends'
-  }, {
-    label: 'Family',
-    icon: 'child_care',
-    state: 'family'
-  }, {
-    label: 'Acquaintances',
-    icon: 'accessibility',
-    state: 'acquaintances'
-  }, {
-    label: 'Following',
-    icon: 'remove_red_eye',
-    state: 'following'
+    state: 'sociology-psychology'
   }];
 }
 

@@ -19,16 +19,19 @@ angular
   .config(function ($firebaseRefProvider) {
 
     var config = {
-      apiKey: "AIzaSyCsNISt3dFx7dy5AImIIk62jDDd0OLvZK0",
-      authDomain: "contacts-manager-e486f.firebaseapp.com",
-      databaseURL: "https://contacts-manager-e486f.firebaseio.com",
-      storageBucket: "contacts-manager-e486f.appspot.com",
+      apiKey: "AIzaSyBtwLvf3QHwmMpeulHsRoUfCU08RW5TW_g",
+      authDomain: "mobiledemo1-d50ce.firebaseapp.com",
+      databaseURL: "https://mobiledemo1-d50ce.firebaseio.com",
+      projectId: "mobiledemo1-d50ce",
+      storageBucket: "mobiledemo1-d50ce.appspot.com",
+      messagingSenderId: "211930341987"
     };
 
     $firebaseRefProvider
       .registerUrl({
         default: config.databaseURL,
-        contacts: config.databaseURL + '/contacts'
+        contacts: config.databaseURL + '/contacts',
+        books : config.databaseURL + '/books'
       });
 
     firebase.initializeApp(config);

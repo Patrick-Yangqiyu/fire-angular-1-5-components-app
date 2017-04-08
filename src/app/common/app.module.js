@@ -15,7 +15,7 @@
 angular
   .module('common', [
     'ui.router',
-    'angular-loading-bar'
+    'angular-loading-bar',
   ])
   .run(function ($transitions, cfpLoadingBar) {
     $transitions.onStart({}, cfpLoadingBar.start);

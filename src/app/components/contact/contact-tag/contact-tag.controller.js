@@ -2,7 +2,7 @@ function ContactTagController() {
   var ctrl = this;
   ctrl.$onInit = function () {
     ctrl.tags = [
-      'friends', 'family', 'acquaintances', 'following'
+      'history', 'science-physics', 'business-economics', 'sociology-psychology'
     ];
   };
   ctrl.$onChanges = function (changes) {
