@@ -31,7 +31,8 @@ angular
       .registerUrl({
         default: config.databaseURL,
         contacts: config.databaseURL + '/contacts',
-        books : config.databaseURL + '/books'
+        books : config.databaseURL + '/books',
+        students : config.databaseURL + '/students',
       });
 
     firebase.initializeApp(config);

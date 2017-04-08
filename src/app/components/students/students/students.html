@@ -1,4 +1,3 @@
-
 <div class="contacts">
 
   <ul class="contacts-list">
@@ -9,13 +8,13 @@
           >
 
           <div class="contact-card__column contact-card__column--name">
-            TITLE
+            NAME
           </div>
           <div class="contact-card__column contact-card__column--name">
-           AUTHOR
+           DEPT
           </div>
           <div class="contact-card__column contact-card__column--email">
-            LOCATION
+            EMAIL
           </div>
 
         </a>
@@ -24,16 +23,16 @@
     </li>
 
 
-    <li ng-repeat="contact in $ctrl.filteredContacts">
-      <contact
-        contact="contact"
-        on-select="$ctrl.goToContact($event);">
-      </contact>
+    <li ng-repeat="student in $ctrl.filteredStudents">
+      <student
+        student="student"
+        on-select="$ctrl.goToStudent($event);">
+      </student>
     </li>
   </ul>
   <div
     class="contacts__empty"
-    ng-if="!$ctrl.filteredContacts.length">
+    ng-if="!$ctrl.filteredStudents.length">
     <i class="material-icons">face</i>
     There's no one here...
   </div>

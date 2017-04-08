@@ -21,5 +21,22 @@
           {{ ::item.label }}
         </a>
     </li>
+    <li
+      class="sidebar__item"
+      ng-repeat="item in ::$ctrl.studentTags">
+      <a
+        class="sidebar__link"
+        ui-sref="students({ filter: item.state })"
+        ui-sref-active-eq="sidebar__link--active">
+        <i class="material-icons">
+          {{ ::item.icon }}
+        </i>
+        {{ ::item.label }}
+      </a>
+    </li>
+
+
+
+
   </ul>
 </aside>

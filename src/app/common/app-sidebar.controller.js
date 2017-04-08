@@ -21,6 +21,18 @@ function AppSidebarController() {
     icon: 'people',
     state: 'sociology-psychology'
   }];
+
+
+  ctrl.studentTags = [{
+    label: 'All Users',
+    icon: 'star',
+    state: 'none'
+  }]
+
+
+
+
+
 }
 
 /**
