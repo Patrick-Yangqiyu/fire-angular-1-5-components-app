@@ -34,6 +34,19 @@
         {{ ::item.label }}
       </a>
     </li>
+    <li
+      class="sidebar__item"
+      ng-repeat="item in ::$ctrl.historyTags">
+      <a
+        class="sidebar__link"
+        ui-sref="historys({ filter: item.state })"
+        ui-sref-active-eq="sidebar__link--active">
+        <i class="material-icons">
+          {{ ::item.icon }}
+        </i>
+        {{ ::item.label }}
+      </a>
+    </li>
 
 
 

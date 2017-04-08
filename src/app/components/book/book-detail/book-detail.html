@@ -13,7 +13,7 @@
         </label>
         <input
           type="text"
-          name="name"
+          name="title"
           length-check
           required="required"
           ng-change="$ctrl.updateBook();"
@@ -25,18 +25,16 @@
             }
           }"
 
-          ng-model="$ctrl.book.name">
+          ng-model="$ctrl.book.title">
       </div>
       <div class="book__field">
         <label>
           Call Number
-          <span class="book__error" ng-if="bookDetailForm.email.$error.email">
-            Must be a valid email
-          </span>
+
         </label>
         <input
-          type="email"
-          name="email"
+          type="text"
+          name="call_number"
           length-check
           ng-change="$ctrl.updateBook();"
           ng-model-options="{
@@ -46,7 +44,7 @@
               'blur': 0
             }
           }"
-          ng-model="$ctrl.book.email">
+          ng-model="$ctrl.book.call_number">
       </div>
       <div class="book__field">
         <label>
@@ -54,7 +52,7 @@
         </label>
         <input
           type="text"
-          name="jobTitle"
+          name="Publisher"
           length-check
           ng-change="$ctrl.updateBook();"
           ng-model-options="{
@@ -64,7 +62,7 @@
               'blur': 0
             }
           }"
-          ng-model="$ctrl.book.job">
+          ng-model="$ctrl.book.publisher">
       </div>
       <div class="book__field">
         <label>
@@ -72,7 +70,7 @@
         </label>
         <input
           type="text"
-          name="location"
+          name="Author"
           length-check
           ng-change="$ctrl.updateBook();"
           ng-model-options="{
@@ -82,7 +80,7 @@
               'blur': 0
             }
           }"
-          ng-model="$ctrl.book.location">
+          ng-model="$ctrl.book.author">
       </div>
     </div>
     <div class="book__box book__box--no-margin">
@@ -95,7 +93,7 @@
         </label>
         <input
           type="text"
-          name="facebook"
+          name="isbn"
           length-check
           ng-change="$ctrl.updateBook();"
           ng-model-options="{
@@ -105,15 +103,15 @@
               'blur': 0
             }
           }"
-          ng-model="$ctrl.book.social.facebook">
+          ng-model="$ctrl.book.isbn">
       </div>
       <div class="book__field">
         <label>
-          Table of content
+          Preview
         </label>
         <input
           type="text"
-          name="github"
+          name="preview"
           length-check
           ng-change="$ctrl.updateBook();"
           ng-model-options="{
@@ -123,29 +121,29 @@
               'blur': 0
             }
           }"
-          ng-model="$ctrl.book.social.github">
+          ng-model="$ctrl.book.preview">
       </div>
+      <!--<div class="book__field">-->
+        <!--<label>-->
+          <!--Twitter-->
+        <!--</label>-->
+        <!--<input-->
+          <!--type="text"-->
+          <!--name="twitter"-->
+          <!--length-check-->
+          <!--ng-change="$ctrl.updateBook();"-->
+          <!--ng-model-options="{-->
+            <!--'updateOn': 'default blur',-->
+            <!--'debounce': {-->
+              <!--'default': 250,-->
+              <!--'blur': 0-->
+            <!--}-->
+          <!--}"-->
+          <!--ng-model="$ctrl.book.social.twitter">-->
+      <!--</div>-->
       <div class="book__field">
         <label>
-          Twitter
-        </label>
-        <input
-          type="text"
-          name="twitter"
-          length-check
-          ng-change="$ctrl.updateBook();"
-          ng-model-options="{
-            'updateOn': 'default blur',
-            'debounce': {
-              'default': 250,
-              'blur': 0
-            }
-          }"
-          ng-model="$ctrl.book.social.twitter">
-      </div>
-      <div class="book__field">
-        <label>
-          LinkedIn
+          Bookphoto
         </label>
         <input type="file" accept="image/*" custom-on-change="$ctrl.image" />
       </div>
@@ -153,10 +151,10 @@
         <img ng-src="{{$ctrl.book.photo_data.url}}">
       </div>
     </div>
-    <book-tag
-      tag="$ctrl.book.tag"
-      on-change="$ctrl.tagChange($event);">
-    </book-tag>
+    <!--<book-tag-->
+      <!--tag="$ctrl.book.tag"-->
+      <!--on-change="$ctrl.tagChange($event);">-->
+    <!--</book-tag>-->
 
     <div ng-if="$ctrl.isNewBook">
       <button

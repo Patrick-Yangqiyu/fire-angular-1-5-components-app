@@ -19,20 +19,21 @@ angular
   .config(function ($firebaseRefProvider) {
 
     var config = {
-      apiKey: "AIzaSyBtwLvf3QHwmMpeulHsRoUfCU08RW5TW_g",
-      authDomain: "mobiledemo1-d50ce.firebaseapp.com",
-      databaseURL: "https://mobiledemo1-d50ce.firebaseio.com",
-      projectId: "mobiledemo1-d50ce",
-      storageBucket: "mobiledemo1-d50ce.appspot.com",
-      messagingSenderId: "211930341987"
+      apiKey: "AIzaSyA6xw3GdJGBh7ureRN4y2fup-_igs2r5vU",
+      authDomain: "fir-guide-ad180.firebaseapp.com",
+      databaseURL: "https://fir-guide-ad180.firebaseio.com",
+      projectId: "fir-guide-ad180",
+      storageBucket: "fir-guide-ad180.appspot.com",
+      messagingSenderId: "739932151297"
     };
 
     $firebaseRefProvider
       .registerUrl({
         default: config.databaseURL,
         contacts: config.databaseURL + '/contacts',
-        books : config.databaseURL + '/books',
-        students : config.databaseURL + '/students',
+        books : config.databaseURL + '/-Books',
+        students : config.databaseURL + '/-user',
+        history : config.databaseURL+'/-history'
       });
 
     firebase.initializeApp(config);

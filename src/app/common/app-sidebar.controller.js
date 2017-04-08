@@ -4,22 +4,6 @@ function AppSidebarController() {
     label: 'All Books',
     icon: 'star',
     state: 'none'
-  }, {
-    label: 'History',
-    icon: 'account_balance',
-    state: 'history'
-  }, {
-    label: 'Science&Physics',
-    icon: 'school',
-    state: 'science-physics'
-  }, {
-    label: 'Business&Economics',
-    icon: 'business_center',
-    state: 'business-economics'
-  }, {
-    label: 'Sociology&Psychology',
-    icon: 'people',
-    state: 'sociology-psychology'
   }];
 
 
@@ -27,7 +11,14 @@ function AppSidebarController() {
     label: 'All Users',
     icon: 'star',
     state: 'none'
+  }];
+
+  ctrl.historyTags = [{
+    label: 'All History',
+    icon: 'star',
+    state: 'none'
   }]
+
 
 
 

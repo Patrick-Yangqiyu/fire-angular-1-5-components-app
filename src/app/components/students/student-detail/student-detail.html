@@ -1,15 +1,15 @@
-<div class="contact">
+<div class="book">
   <form name="studentDetailForm" novalidate>
     <div>
-      <span class="contact__required">*</span> field is required
+      <span class="book__required">*</span> field is required
     </div>
-    <div class="contact__box">
-      <h3 class="contact__sub-title">
+    <div class="book__box">
+      <h3 class="book__sub-title">
         Information
       </h3>
-      <div class="contact__field">
+      <div class="book__field">
         <label>
-          Title <span class="contact__required">*</span>
+          Title <span class="book__required">*</span>
         </label>
         <input
           type="text"
@@ -26,10 +26,10 @@
           }"
           ng-model="$ctrl.student.name">
       </div>
-      <div class="contact__field">
+      <div class="book__field">
         <label>
-          Call Number
-          <span class="contact__error" ng-if="studentDetailForm.email.$error.email">
+          E-mail
+          <span class="book__error" ng-if="studentDetailForm.email.$error.email">
             Must be a valid email
           </span>
         </label>
@@ -47,54 +47,17 @@
           }"
           ng-model="$ctrl.student.email">
       </div>
-      <div class="contact__field">
-        <label>
-          Publisher
-        </label>
-        <input
-          type="text"
-          name="jobTitle"
-          length-check
-          ng-change=""
-          ng-model-options="{
-            'updateOn': 'default blur',
-            'debounce': {
-              'default': 250,
-              'blur': 0
-            }
-          }"
-          ng-model="$ctrl.student.job">
-      </div>
-      <div class="contact__field">
-        <label>
-          Author
-        </label>
-        <input
-          type="text"
-          name="location"
-          length-check
-          ng-change=""
-          ng-model-options="{
-            'updateOn': 'default blur',
-            'debounce': {
-              'default': 250,
-              'blur': 0
-            }
-          }"
-          ng-model="$ctrl.student.location">
-      </div>
+
     </div>
-    <div class="contact__box student__box--no-margin">
-      <h3 class="contact__sub-title">
-        Details
-      </h3>
-      <div class="contact__field">
+    <div class="book__box student__box--no-margin">
+
+      <div class="book__field">
         <label>
-          ISBN/ISSN
+          Department
         </label>
         <input
           type="text"
-          name="facebook"
+          name="department"
           length-check
           ng-change=""
           ng-model-options="{
@@ -104,15 +67,15 @@
               'blur': 0
             }
           }"
-          ng-model="$ctrl.student.social.facebook">
+          ng-model="$ctrl.student.department">
       </div>
-      <div class="contact__field">
+      <div class="book__field">
         <label>
-          Table of content
+          Phone
         </label>
         <input
           type="text"
-          name="github"
+          name="phone"
           length-check
           ng-change=""
           ng-model-options="{
@@ -122,50 +85,15 @@
               'blur': 0
             }
           }"
-          ng-model="$ctrl.student.social.github">
+          ng-model="$ctrl.student.phone">
       </div>
-      <div class="contact__field">
-        <label>
-          Twitter
-        </label>
-        <input
-          type="text"
-          name="twitter"
-          length-check
-          ng-change=""
-          ng-model-options="{
-            'updateOn': 'default blur',
-            'debounce': {
-              'default': 250,
-              'blur': 0
-            }
-          }"
-          ng-model="$ctrl.student.social.twitter">
-      </div>
-      <div class="contact__field">
-        <label>
-          LinkedIn
-        </label>
-        <input
-          type="text"
-          name="linkedin"
-          length-check
-          ng-change=""
-          ng-model-options="{
-            'updateOn': 'default blur',
-            'debounce': {
-              'default': 250,
-              'blur': 0
-            }
-          }"
-          ng-model="$ctrl.student.social.linkedin">
-      </div>
+
     </div>
 
 
     <div ng-if="$ctrl.isNewStudent">
       <button
-        class="contact__action button"
+        class="book__action button"
         ng-disabled="studentDetailForm.$invalid"
         ng-click="$ctrl.saveStudent();">
         Create student
@@ -175,13 +103,13 @@
 
 
       <button
-        class="contact__action button delete"
+        class="book__action button delete"
         ng-click="$ctrl.deleteStudent();">
         Delete User
       </button>
       &nbsp;
       <button
-        class="contact__action button "
+        class="book__action button "
         ng-click="$ctrl.updateStudent();">
         Update User
       </button>

@@ -17,5 +17,6 @@ angular
   .module('components', [
     'components.book',
     'components.auth',
-    'components.student'
+    'components.student',
+    'components.history'
   ]);

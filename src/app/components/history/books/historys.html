@@ -4,17 +4,17 @@
     <li>
       <div class="book-card">
         <a
-           class="book-card__link button--clean"
-          >
+          class="book-card__link button--clean"
+        >
 
           <div class="book-card__column book-card__column--name">
-            NAME
+            TIME
           </div>
           <div class="book-card__column book-card__column--name">
-            DEPT
+            USER NAME
           </div>
           <div class="book-card__column book-card__column--email">
-            EMAIL
+            HISTORY TITLE
           </div>
 
         </a>
@@ -22,17 +22,18 @@
 
     </li>
 
-
-    <li ng-repeat="student in $ctrl.filteredStudents">
-      <student
-        student="student"
-        on-select="$ctrl.goToStudent($event);">
-      </student>
+    <div ng-repeat="userhistory in $ctrl.filteredHistorys">
+    <li ng-repeat="history in userhistory track by $index">
+      <history
+        history="history"
+        on-select="$ctrl.goToHistory($event);">
+      </history>
     </li>
+    </div>
   </ul>
   <div
     class="books__empty"
-    ng-if="!$ctrl.filteredStudents.length">
+    ng-if="!$ctrl.filteredHistorys.length">
     <i class="material-icons">face</i>
     There's no one here...
   </div>

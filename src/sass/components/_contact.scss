@@ -1,7 +1,7 @@
-.contact {
+.book {
   padding: 10px 15px;
 }
-.contact__saving {
+.book__saving {
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
@@ -11,17 +11,17 @@
   font-size: 16px;
   border-radius: 3px;
 }
-.contact__field {
+.book__field {
   margin-bottom: 15px;
   padding-right: 30px;
 }
 .bookphoto{
   float: left;
 }
-.contact button {
+.book button {
   float: right;
 }
-.contact__required {
+.book__required {
   color: colors(scaffold, error);
   font-size: 16px;
   line-height: 0px;
@@ -29,14 +29,14 @@
   top: 4px;
   margin-left: 5px;
 }
-.contact__field--long {
+.book__field--long {
   width: 600px;
 }
-.contact__error {
+.book__error {
   float: right;
   color: colors(scaffold, error);
 }
-.contact__field label {
+.book__field label {
   font-size: 12px;
   color: #A4B4C4;
   font-weight: 500;
@@ -45,25 +45,25 @@
   display: block;
   margin-bottom: 3px;
 }
-.contact__field input {
+.book__field input {
   width: 100%;
 }
-.contact__box {
+.book__box {
   float: left;
   width: 50%;
   max-width: 770px;
 }
-.contact__box--no-margin {
+.book__box--no-margin {
   margin-right: 0;
 }
 
-.contact__pill {
+.book__pill {
   opacity: 0.4;
   cursor: pointer;
   font-size: 16px;
 }
 
-.contact__sub-title {
+.book__sub-title {
   font-size: 24px;
   font-weight: 300;
   margin: 10px 15px;

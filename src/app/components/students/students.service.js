@@ -22,27 +22,6 @@ function StudentService(AuthService, $firebaseRef, $firebaseArray, $firebaseObje
   };
 }
 
-//   var ref = $firebaseRef.books;
-//   var uid = AuthService.getUser().uid;
-//   return {
-//     createNewContact: function (contact) {
-//       return $firebaseArray(ref).$add(contact);
-//     },
-//     getContactById: function (id) {
-//       return $firebaseObject(ref.child(id));
-//     },
-//     getContactList: function () {
-//       return $firebaseArray(ref);
-//     },
-//     updateContact: function (contact) {
-//       return contact.$save();
-//     },
-//     deleteContact: function (contact) {
-//       return contact.$remove();
-//     }
-//   };
-// }
-
 
 angular
   .module('components.student')

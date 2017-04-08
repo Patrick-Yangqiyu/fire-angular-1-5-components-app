@@ -2,20 +2,16 @@ function BookNewController(BookService, $state) {
   var ctrl = this;
   ctrl.$onInit = function () {
     ctrl.book = {
-      name: '',
-      email: '',
-      job: '',
-      location: '',
-      social: {
-        facebook: '',
-        github: '',
-        twitter: '',
-        linkedin: ''
+      title: '',
+      author: '',
+      publisher: '',
+      preview: '',
+      photo_data: {
+        url: ''
       },
-      photo_data:{
-          url:''
-      },
-      tag: 'none'
+      tag: 'none',
+      isbn: '',
+      call_numer: ''
     };
   };
   ctrl.createNewBook = function (event) {

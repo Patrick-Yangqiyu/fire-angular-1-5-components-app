@@ -4,15 +4,8 @@ function StudentNewController(StudentService, $state) {
     ctrl.student = {
       name: '',
       email: '',
-      job: '',
-      location: '',
-      social: {
-        facebook: '',
-        github: '',
-        twitter: '',
-        linkedin: ''
-      },
-      tag: 'none'
+      department: '',
+      phone: ''
     };
   };
   ctrl.createNewStudent = function (event) {

@@ -4,17 +4,15 @@
     ng-click="$ctrl.selectBook();">
 
     <div class="book-card__column book-card__column--name">
-      {{ ::$ctrl.book.name }}
+      {{ ::$ctrl.book.title }}
 
     </div>
     <div class="book-card__column book-card__column--name">
-      {{ ::$ctrl.book.name }}
+      {{ ::$ctrl.book.author }}
     </div>
     <div class="book-card__column book-card__column--email">
-      {{ ::$ctrl.book.email }}
-      <span class="book-card__pill book-card__pill--{{ ::$ctrl.book.tag }}">
-        {{ ::$ctrl.book.tag }}
-      </span>
+      {{ ::$ctrl.book.call_number }}
+
     </div>
 
   </a>
