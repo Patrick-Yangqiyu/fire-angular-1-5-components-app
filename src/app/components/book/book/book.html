@@ -2,6 +2,10 @@
   <a href=""
     class="book-card__link button--clean"
     ng-click="$ctrl.selectBook();">
+    
+    <div class="book-card__column book-card__column--name">
+      <img style="width: 50%; height: auto" ng-src="{{$ctrl.book.photo_data.url}}">
+    </div>
 
     <div class="book-card__column book-card__column--name">
       {{ ::$ctrl.book.title }}
@@ -12,8 +16,8 @@
     </div>
     <div class="book-card__column book-card__column--email">
       {{ ::$ctrl.book.call_number }}
-
     </div>
+
 
   </a>
 </div>
