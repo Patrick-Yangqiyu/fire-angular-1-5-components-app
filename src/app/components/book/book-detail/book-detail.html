@@ -82,6 +82,15 @@
           }"
           ng-model="$ctrl.book.author">
       </div>
+      <div class="book__field">
+        <label>
+          Bookphoto
+        </label>
+        <input type="file" accept="image/*" custom-on-change="$ctrl.image" />
+      </div>
+      <div class="bookphoto">
+        <img style="width: 50%; height: auto" ng-src="{{$ctrl.book.photo_data.url}}">
+      </div>
     </div>
     <div class="book__box book__box--no-margin">
       <h3 class="book__sub-title">
@@ -109,10 +118,8 @@
         <label>
           Preview
         </label>
-        <input
-          type="text"
+        <textarea
           name="preview"
-          length-check
           ng-change="$ctrl.updateBook();"
           ng-model-options="{
             'updateOn': 'default blur',
@@ -121,7 +128,22 @@
               'blur': 0
             }
           }"
-          ng-model="$ctrl.book.preview">
+          ng-model="$ctrl.book.preview"
+          style="width: 100%; height: 280px; padding: 12px; font-size: 16px; resize: none">
+        </textarea>
+        <!--<input-->
+          <!--type="text"-->
+          <!--name="preview"-->
+          <!--length-check-->
+          <!--ng-change="$ctrl.updateBook();"-->
+          <!--ng-model-options="{-->
+            <!--'updateOn': 'default blur',-->
+            <!--'debounce': {-->
+              <!--'default': 250,-->
+              <!--'blur': 0-->
+            <!--}-->
+          <!--}"-->
+          <!--ng-model="$ctrl.book.preview">-->
       </div>
       <!--<div class="book__field">-->
         <!--<label>-->
@@ -141,15 +163,7 @@
           <!--}"-->
           <!--ng-model="$ctrl.book.social.twitter">-->
       <!--</div>-->
-      <div class="book__field">
-        <label>
-          Bookphoto
-        </label>
-        <input type="file" accept="image/*" custom-on-change="$ctrl.image" />
-      </div>
-      <div class="bookphoto">
-        <img ng-src="{{$ctrl.book.photo_data.url}}">
-      </div>
+
     </div>
     <!--<book-tag-->
       <!--tag="$ctrl.book.tag"-->
