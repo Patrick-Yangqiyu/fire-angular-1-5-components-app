@@ -2,7 +2,7 @@ function StudentNewController(StudentService, $state) {
   var ctrl = this;
   ctrl.$onInit = function () {
     ctrl.student = {
-      name: '',
+      user_name: '',
       email: '',
       department: '',
       phone: ''

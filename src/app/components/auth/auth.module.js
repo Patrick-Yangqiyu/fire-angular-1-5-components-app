@@ -32,7 +32,7 @@ angular
         default: config.databaseURL,
         contacts: config.databaseURL + '/contacts',
         books : config.databaseURL + '/-Books',
-        students : config.databaseURL + '/-user',
+        students : config.databaseURL + '/user',
         history : config.databaseURL+'/-history'
       });
 
